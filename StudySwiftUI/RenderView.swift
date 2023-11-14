@@ -23,15 +23,29 @@ struct RenderView: View {
      
      */
     var body: some View {
-        VStack {
-            hue
-            JackView()  // 버튼을 눌렀을 떄 해당 뷰만 다시 안그려지고 있음.
-            Text("Bran: \(age), \(Int.random(in: 1...100))")
-            Text("Koko: \(Int.random(in: 1...100))")
-            
-            Button("액션") {
-                age = Int.random(in: 1...100)
+        NavigationView {
+            VStack {
+                /**
+                 NavigationVIew (iOS 15)
+                 NavigationStack (iOS 16+)
+                 */
+                // NavigationBar - Push 방식 [ NavigationView + NavigationLink ]
+                NavigationLink("Push") {
+                    MenuView()
+                }
+                .padding(20)
+                
+                hue
+                JackView()  // 버튼을 눌렀을 떄 해당 뷰만 다시 안그려지고 있음.
+                Text("Bran: \(age), \(Int.random(in: 1...100))")
+                Text("Koko: \(Int.random(in: 1...100))")
+                
+                Button("액션") {
+                    age = Int.random(in: 1...100)
+                }
             }
+            .navigationTitle("Wow")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
