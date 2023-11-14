@@ -25,6 +25,27 @@ struct RenderView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
+                HStack {
+                    RoundedRectangle(cornerSize: .init(width: 30, height: 30))
+                        .fill(
+                            
+                            LinearGradient(gradient: Gradient(colors: [Color.red, Color.yellow, Color.blue]), startPoint: .bottomLeading, endPoint: .bottomTrailing)
+                            
+                            
+                        )
+                    RoundedRectangle(cornerSize: .init(width: 30, height: 30))
+                        .fill(
+                            RadialGradient(gradient: Gradient(colors: [.yellow, .red]), center: .bottom, startRadius: 20, endRadius: 100)
+                        )
+                    
+                    RoundedRectangle(cornerSize: .init(width: 30, height: 30))
+                        .fill(
+                            AngularGradient.init(gradient: Gradient(colors: [Color.red, Color.blue]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        )
+                    
+                }.frame(width: .infinity, height: 100)
+                
                 /**
                  NavigationVIew (iOS 15)
                  NavigationStack (iOS 16+)
