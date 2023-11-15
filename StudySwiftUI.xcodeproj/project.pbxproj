@@ -18,6 +18,9 @@
 		C07FA78C2B01C1B5000B93F3 /* PointBorderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FA78B2B01C1B5000B93F3 /* PointBorderText.swift */; };
 		C07FA78E2B01C7BE000B93F3 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FA78D2B01C7BE000B93F3 /* Extension+View.swift */; };
 		C07FA7902B01C897000B93F3 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07FA78F2B01C897000B93F3 /* RenderView.swift */; };
+		C0DAE9282B044C430067279A /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9272B044C430067279A /* TransitionView.swift */; };
+		C0DAE92A2B0450290067279A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9292B0450290067279A /* CategoryView.swift */; };
+		C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE92B2B045BBC0067279A /* PosterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		C07FA78B2B01C1B5000B93F3 /* PointBorderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointBorderText.swift; sourceTree = "<group>"; };
 		C07FA78D2B01C7BE000B93F3 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		C07FA78F2B01C897000B93F3 /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		C0DAE9272B044C430067279A /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		C0DAE9292B0450290067279A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		C0DAE92B2B045BBC0067279A /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +55,6 @@
 		C07FA76D2B01A8CD000B93F3 = {
 			isa = PBXGroup;
 			children = (
-				C01A42BE2B03381A00317956 /* MovieView.swift */,
 				C07FA7782B01A8CD000B93F3 /* StudySwiftUI */,
 				C07FA7772B01A8CD000B93F3 /* Products */,
 			);
@@ -66,6 +71,7 @@
 		C07FA7782B01A8CD000B93F3 /* StudySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C01A42BE2B03381A00317956 /* MovieView.swift */,
 				C07FA77D2B01A8CE000B93F3 /* Assets.xcassets */,
 				C07FA7892B01BC68000B93F3 /* CardView.swift */,
 				C07FA77B2B01A8CD000B93F3 /* ContentView.swift */,
@@ -76,6 +82,9 @@
 				C07FA78F2B01C897000B93F3 /* RenderView.swift */,
 				C07FA7792B01A8CD000B93F3 /* StudySwiftUIApp.swift */,
 				C01A42BC2B03078800317956 /* TamagochiView.swift */,
+				C0DAE9272B044C430067279A /* TransitionView.swift */,
+				C0DAE9292B0450290067279A /* CategoryView.swift */,
+				C0DAE92B2B045BBC0067279A /* PosterView.swift */,
 			);
 			path = StudySwiftUI;
 			sourceTree = "<group>";
@@ -161,12 +170,15 @@
 				C07FA77C2B01A8CD000B93F3 /* ContentView.swift in Sources */,
 				C07FA78C2B01C1B5000B93F3 /* PointBorderText.swift in Sources */,
 				C07FA7882B01B96D000B93F3 /* MenuView.swift in Sources */,
+				C0DAE9282B044C430067279A /* TransitionView.swift in Sources */,
 				C07FA78A2B01BC68000B93F3 /* CardView.swift in Sources */,
+				C0DAE92A2B0450290067279A /* CategoryView.swift in Sources */,
 				C01A42BF2B03381A00317956 /* MovieView.swift in Sources */,
 				C07FA78E2B01C7BE000B93F3 /* Extension+View.swift in Sources */,
 				C07FA7902B01C897000B93F3 /* RenderView.swift in Sources */,
 				C01A42BD2B03078800317956 /* TamagochiView.swift in Sources */,
 				C07FA77A2B01A8CD000B93F3 /* StudySwiftUIApp.swift in Sources */,
+				C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
