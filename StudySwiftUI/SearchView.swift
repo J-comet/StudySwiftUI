@@ -20,6 +20,10 @@ struct SearchView: View {
     @State private var isSheetScreen = false
     @State private var searchQuery = ""
     
+    var filterMovie: [Movie] {
+        return searchQuery.isEmpty ? movies : movies.filter{ $0.name.contains(searchQuery) }
+    }
+    
     // 네비게이션레이지뷰에서 각 뷰 별로 데이터 전달은 어떻게?
     // 소프트키보드는 어떻게 띄움??
     
@@ -32,24 +36,46 @@ struct SearchView: View {
     ]
     
     var body: some View {
-        NavigationView {
+        /**
+         NavigationStack = destination
+         */
+        
+        NavigationStack {
             List {
-                ForEach(movies, id: \.self) { item in
+                ForEach(filterMovie, id: \.self) { item in
                     // 셀 마다 버튼이 있다고 이해
                     // NavigaionLink == Button
-                    NavigationLink {
-                        SearchDetailView(movie: item)
-                    } label: {
+                    // iOS 15 - NavigationView 일 때 처리되어 있음.
+                    //                    NavigationLink {
+                    //                        NavigationLazyView(SearchDetailView(movie: item))
+                    //                    } label: {
+                    //                        HStack {
+                    //                            Circle().foregroundStyle(item.color)
+                    //                            Text(item.name)
+                    //                                .frame(width: .infinity,alignment: .center)
+                    //                        }
+                    //                        .frame(width: .infinity,height: 60)
+                    //                    }
+                    
+                    // iOS 16+ - NavigationStack
+                    //  : 네비바 푸시되어 이동하는 화면의 init 되던 부분을 개선해서 나온 것
+                    // NavigationLink(value: 타입을 전달) -> navigationDestination(for: 타입 맞춰주기)
+                    NavigationLink(value: item) {
                         HStack {
                             Circle().foregroundStyle(item.color)
                             Text(item.name)
-                                .navigationTitle("네비타이틀")
                                 .frame(width: .infinity,alignment: .center)
                         }
                         .frame(width: .infinity,height: 60)
                     }
                 }
             }
+            .navigationTitle("검색")
+            .navigationDestination(for: Movie.self) { item in
+                // 화면 전환 처리
+                SearchDetailView(movie: item)
+            }
+            
         }
         .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "검색어를 입력 해주세요!")
         .onSubmit(of: .search) {
@@ -80,28 +106,28 @@ struct SearchDetailView: View {
 
 // 구조체를 별도로 사용하지 않는 한 body 안의 모든 View 가 다시 렌더링 되는 부분 테스트
 //struct SearchView: View {
-//    
+//
 //    @State var randomNumber = 0
-//    
+//
 //    init(randomNumber: Int = 0) {
 //        self.randomNumber = randomNumber
 //        print("\(self) - init")
 //    }
-//    
+//
 //    var jack: some View {
 //        Text("Jack")
 //            .padding()
 //            .background(Color.random())
 //            .foregroundStyle(.white)
 //    }
-//    
+//
 //    func kokoView() -> some View {
 //        Text("Kokojong")
 //            .padding()
 //            .background(Color.random())
 //            .foregroundStyle(.white)
 //    }
-//    
+//
 //    var body: some View {
 //        /**
 //         구조체를 별도로 사용하지 않는 한 body 안의 모든 View 가 다시 렌더링 됨.
@@ -114,7 +140,7 @@ struct SearchDetailView: View {
 //                .padding()
 //                .background(Color.random())
 //                .foregroundStyle(.white)
-//            
+//
 //            Button(action: {
 //                randomNumber = Int.random(in: 1...100)
 //            }, label: {
@@ -125,7 +151,7 @@ struct SearchDetailView: View {
 //            .foregroundStyle(.white)
 //            .containerShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
 //        }
-//        
+//
 //    }
 //}
 
