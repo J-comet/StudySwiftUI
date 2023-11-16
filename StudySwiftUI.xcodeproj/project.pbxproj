@@ -21,6 +21,8 @@
 		C0DAE9282B044C430067279A /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9272B044C430067279A /* TransitionView.swift */; };
 		C0DAE92A2B0450290067279A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9292B0450290067279A /* CategoryView.swift */; };
 		C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE92B2B045BBC0067279A /* PosterView.swift */; };
+		C0DAE9302B046F4F0067279A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE92F2B046F4F0067279A /* HomeView.swift */; };
+		C0DAE9322B0471C00067279A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9312B0471C00067279A /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		C0DAE9272B044C430067279A /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
 		C0DAE9292B0450290067279A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		C0DAE92B2B045BBC0067279A /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
+		C0DAE92F2B046F4F0067279A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C0DAE9312B0471C00067279A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				C0DAE9272B044C430067279A /* TransitionView.swift */,
 				C0DAE9292B0450290067279A /* CategoryView.swift */,
 				C0DAE92B2B045BBC0067279A /* PosterView.swift */,
+				C0DAE92F2B046F4F0067279A /* HomeView.swift */,
+				C0DAE9312B0471C00067279A /* StartView.swift */,
 			);
 			path = StudySwiftUI;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 			files = (
 				C07FA77C2B01A8CD000B93F3 /* ContentView.swift in Sources */,
 				C07FA78C2B01C1B5000B93F3 /* PointBorderText.swift in Sources */,
+				C0DAE9302B046F4F0067279A /* HomeView.swift in Sources */,
 				C07FA7882B01B96D000B93F3 /* MenuView.swift in Sources */,
 				C0DAE9282B044C430067279A /* TransitionView.swift in Sources */,
 				C07FA78A2B01BC68000B93F3 /* CardView.swift in Sources */,
@@ -179,6 +186,7 @@
 				C01A42BD2B03078800317956 /* TamagochiView.swift in Sources */,
 				C07FA77A2B01A8CD000B93F3 /* StudySwiftUIApp.swift in Sources */,
 				C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */,
+				C0DAE9322B0471C00067279A /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
