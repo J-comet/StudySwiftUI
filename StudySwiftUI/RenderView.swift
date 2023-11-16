@@ -8,6 +8,22 @@
 import SwiftUI
 
 struct RenderView: View {
+    /**
+     @Environment
+     - 시스템에서 정의된 값을 감지하고 뷰를 업데이트 할 수 있음
+     - 어떤 뷰에서도 같은 값을 가짐
+     
+     @State
+     - 해당하는 뷰에서만 값을 가짐
+     */
+    
+    // 화면 전환 관련 프로퍼티
+    // presentationMode = deprecated
+//    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    
+    // 라이트모드 or 다크모드 설정
+    @Environment(\.colorScheme) var colorScheme
     
     init(age: Int = 10) {
         self.age = age
@@ -30,7 +46,6 @@ struct RenderView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 HStack {
                     RoundedRectangle(cornerSize: .init(width: 30, height: 30))
                         .fill(
@@ -66,9 +81,14 @@ struct RenderView: View {
                 Text("Bran: \(age), \(Int.random(in: 1...100))")
                 Text("Koko: \(Int.random(in: 1...100))")
                 
-                Button("액션") {
-                    age = Int.random(in: 1...100)
+                Button(colorScheme == .dark ? "다크모드" : "라이트모드") {
+                    // dismiss 코드
+//                    presentationMode.wrappedValue.dismiss()
+                    dismiss.callAsFunction()
                 }
+                .padding()
+                .background(colorScheme == .dark ? .white : .blue)
+                .foregroundStyle(colorScheme == .dark ? .brown : .yellow)
             }
             .navigationTitle("Wow")
             .navigationBarTitleDisplayMode(.inline)

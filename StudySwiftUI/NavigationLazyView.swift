@@ -11,6 +11,8 @@ import SwiftUI
  Push 로 화면전환시 이동할 화면을 항상 init 하게 됨.
  중간에 LazyView 를 만들어서 미리 init 되는 부분 방지
  */
+
+// 뷰 별로 데이터 전달은 어떻게하남..?
 struct NavigationLazyView<T: View>: View {
     
     let build: () -> T
