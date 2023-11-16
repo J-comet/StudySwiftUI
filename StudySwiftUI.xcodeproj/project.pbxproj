@@ -23,6 +23,10 @@
 		C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE92B2B045BBC0067279A /* PosterView.swift */; };
 		C0DAE9302B046F4F0067279A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE92F2B046F4F0067279A /* HomeView.swift */; };
 		C0DAE9322B0471C00067279A /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9312B0471C00067279A /* StartView.swift */; };
+		C0DAE9522B05A5D50067279A /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9512B05A5D50067279A /* AsyncImageView.swift */; };
+		C0DAE9562B05A74F0067279A /* ThumbImageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9552B05A74F0067279A /* ThumbImageFrame.swift */; };
+		C0DAE9582B05A82F0067279A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9572B05A82F0067279A /* SearchView.swift */; };
+		C0DAE95A2B05AA370067279A /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9592B05AA370067279A /* Extension+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		C0DAE92B2B045BBC0067279A /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		C0DAE92F2B046F4F0067279A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C0DAE9312B0471C00067279A /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		C0DAE9512B05A5D50067279A /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		C0DAE9552B05A74F0067279A /* ThumbImageFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbImageFrame.swift; sourceTree = "<group>"; };
+		C0DAE9572B05A82F0067279A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C0DAE9592B05AA370067279A /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +83,13 @@
 		C07FA7782B01A8CD000B93F3 /* StudySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C0DAE9542B05A6F80067279A /* Extension */,
+				C0DAE9532B05A6EE0067279A /* CustomModifier */,
 				C01A42BE2B03381A00317956 /* MovieView.swift */,
 				C07FA77D2B01A8CE000B93F3 /* Assets.xcassets */,
 				C07FA7892B01BC68000B93F3 /* CardView.swift */,
 				C07FA77B2B01A8CD000B93F3 /* ContentView.swift */,
-				C07FA78D2B01C7BE000B93F3 /* Extension+View.swift */,
 				C07FA7872B01B96D000B93F3 /* MenuView.swift */,
-				C07FA78B2B01C1B5000B93F3 /* PointBorderText.swift */,
 				C07FA77F2B01A8CE000B93F3 /* Preview Content */,
 				C07FA78F2B01C897000B93F3 /* RenderView.swift */,
 				C07FA7792B01A8CD000B93F3 /* StudySwiftUIApp.swift */,
@@ -91,6 +99,8 @@
 				C0DAE92B2B045BBC0067279A /* PosterView.swift */,
 				C0DAE92F2B046F4F0067279A /* HomeView.swift */,
 				C0DAE9312B0471C00067279A /* StartView.swift */,
+				C0DAE9512B05A5D50067279A /* AsyncImageView.swift */,
+				C0DAE9572B05A82F0067279A /* SearchView.swift */,
 			);
 			path = StudySwiftUI;
 			sourceTree = "<group>";
@@ -101,6 +111,24 @@
 				C07FA7802B01A8CE000B93F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C0DAE9532B05A6EE0067279A /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				C07FA78B2B01C1B5000B93F3 /* PointBorderText.swift */,
+				C0DAE9552B05A74F0067279A /* ThumbImageFrame.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		C0DAE9542B05A6F80067279A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C07FA78D2B01C7BE000B93F3 /* Extension+View.swift */,
+				C0DAE9592B05AA370067279A /* Extension+Color.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,13 +207,17 @@
 				C07FA7882B01B96D000B93F3 /* MenuView.swift in Sources */,
 				C0DAE9282B044C430067279A /* TransitionView.swift in Sources */,
 				C07FA78A2B01BC68000B93F3 /* CardView.swift in Sources */,
+				C0DAE9582B05A82F0067279A /* SearchView.swift in Sources */,
+				C0DAE95A2B05AA370067279A /* Extension+Color.swift in Sources */,
 				C0DAE92A2B0450290067279A /* CategoryView.swift in Sources */,
 				C01A42BF2B03381A00317956 /* MovieView.swift in Sources */,
+				C0DAE9522B05A5D50067279A /* AsyncImageView.swift in Sources */,
 				C07FA78E2B01C7BE000B93F3 /* Extension+View.swift in Sources */,
 				C07FA7902B01C897000B93F3 /* RenderView.swift in Sources */,
 				C01A42BD2B03078800317956 /* TamagochiView.swift in Sources */,
 				C07FA77A2B01A8CD000B93F3 /* StudySwiftUIApp.swift in Sources */,
 				C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */,
+				C0DAE9562B05A74F0067279A /* ThumbImageFrame.swift in Sources */,
 				C0DAE9322B0471C00067279A /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

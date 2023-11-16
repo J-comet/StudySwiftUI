@@ -17,6 +17,13 @@ struct TransitionView: View {
     @State private var isFullScreen = false
     @State private var isSheetScreen = false
     
+    
+    init(isFullScreen: Bool = false, isSheetScreen: Bool = false) {
+        self.isFullScreen = isFullScreen
+        self.isSheetScreen = isSheetScreen
+        print("\(self) - init")
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -44,6 +51,8 @@ struct TransitionView: View {
                 .foregroundStyle(.white)
                 
                 // Push 방식
+                // NavigaionLink 에서는 넘어갈 화면이 미리 init 되어 있음.
+                
                 NavigationLink("Push") {
                     RenderView()
                 }

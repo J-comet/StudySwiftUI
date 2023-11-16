@@ -9,6 +9,11 @@ import SwiftUI
 
 struct RenderView: View {
     
+    init(age: Int = 10) {
+        self.age = age
+        print("\(self) - init")
+    }
+    
     var hue: some View {
         Text("Hue: \(Int.random(in: 1...100))")
     }

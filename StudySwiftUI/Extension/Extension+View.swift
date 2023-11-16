@@ -13,4 +13,8 @@ extension View {
         modifier(PointBorderText())
     }
     
+    func asThumbImageFrame() -> some View {
+        modifier(ThumbImageFrame())
+    }
+    
 }

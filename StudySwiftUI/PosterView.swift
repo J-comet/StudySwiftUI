@@ -29,7 +29,7 @@ struct PosterView: View {
                 ForEach(0..<50) { item in
                     // frame 을 지정해둬야 보이는 영역의 ImageView 만 이미지 로드 함
                     AsyncImageView()
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .asThumbImageFrame()
                         .onTapGesture {
                             print("클릭")
                             isPresented.toggle()
@@ -50,51 +50,7 @@ struct PosterView: View {
     }
 }
 
-struct AsyncImageView: View {
-    
-    let url = URL(string: "https://picsum.photos/200")!
-    
-    var body: some View {
-        //        AsyncImage(url: url)
-        //            .aspectRatio(contentMode: .fill)
-        
-        AsyncImage(url: url) { data in
-            switch data {
-            case .empty:
-                ProgressView()
-            case .success(let image):
-                image
-                    .frame(width: 100, height: 100)
-                    .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerSize: .init(width: 20, height: 20))
-                    )
-            case .failure(_):
-                Image(systemName: "person")
-            @unknown default:
-                Image(systemName: "person")
-            }
-        }
-        
-        
-        
-        
-        //        /**
-        //         - 에러상황일 때 대응할 수 없음
-        //         - 에러일 때 placeholder 에서 계속 동작됨.
-        //         */
-        //        AsyncImage(url: url) { image in
-        //            image
-        //                .frame(width: 100, height: 100)
-        //                .scaledToFit()
-        //                .clipShape(RoundedRectangle(cornerSize: .init(width: 20, height: 20)))
-        ////                .cornerRadius(20)
-        //        } placeholder: {
-        //            ProgressView()
-        ////            Image(.turtle)
-        //        }
-        
-    }
-}
+
 
 #Preview {
     PosterView()
