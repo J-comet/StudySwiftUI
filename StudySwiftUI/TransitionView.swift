@@ -54,10 +54,19 @@ struct TransitionView: View {
                 // NavigaionLink 에서는 넘어갈 화면이 미리 init 되어 있음.
                 
                 NavigationLink("Push") {
-                    RenderView()
+//                    RenderView()
+                    // RenderView 가 미리 init 안되도록 중간다리 View 추가
+                    NavigationLazyView(RenderView())
                 }
                 .padding(16)
                 .background(.green)
+                .foregroundStyle(.white)
+                
+                NavigationLink("Push22") {
+                    NavigationLazyView(PosterView())
+                }
+                .padding(16)
+                .background(.red)
                 .foregroundStyle(.white)
             }
             .sheet(isPresented: $isSheetScreen, content: {

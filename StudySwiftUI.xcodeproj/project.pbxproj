@@ -27,6 +27,7 @@
 		C0DAE9562B05A74F0067279A /* ThumbImageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9552B05A74F0067279A /* ThumbImageFrame.swift */; };
 		C0DAE9582B05A82F0067279A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9572B05A82F0067279A /* SearchView.swift */; };
 		C0DAE95A2B05AA370067279A /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE9592B05AA370067279A /* Extension+Color.swift */; };
+		C0DAE95C2B05B4530067279A /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DAE95B2B05B4530067279A /* NavigationLazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C0DAE9552B05A74F0067279A /* ThumbImageFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbImageFrame.swift; sourceTree = "<group>"; };
 		C0DAE9572B05A82F0067279A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C0DAE9592B05AA370067279A /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		C0DAE95B2B05B4530067279A /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				C0DAE9312B0471C00067279A /* StartView.swift */,
 				C0DAE9512B05A5D50067279A /* AsyncImageView.swift */,
 				C0DAE9572B05A82F0067279A /* SearchView.swift */,
+				C0DAE95B2B05B4530067279A /* NavigationLazyView.swift */,
 			);
 			path = StudySwiftUI;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				C07FA7902B01C897000B93F3 /* RenderView.swift in Sources */,
 				C01A42BD2B03078800317956 /* TamagochiView.swift in Sources */,
 				C07FA77A2B01A8CD000B93F3 /* StudySwiftUIApp.swift in Sources */,
+				C0DAE95C2B05B4530067279A /* NavigationLazyView.swift in Sources */,
 				C0DAE92C2B045BBC0067279A /* PosterView.swift in Sources */,
 				C0DAE9562B05A74F0067279A /* ThumbImageFrame.swift in Sources */,
 				C0DAE9322B0471C00067279A /* StartView.swift in Sources */,
