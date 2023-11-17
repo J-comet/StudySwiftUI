@@ -12,10 +12,12 @@ struct Movie: Hashable, Identifiable {
     var id = UUID()
     let name: String
     let color = Color.random()
+    let count = Int.random(in: 1...100)
 }
 
 struct SearchView: View {
     
+    @State private var showChart = false
     
     @State private var isSheetScreen = false
     @State private var searchQuery = ""
@@ -40,7 +42,7 @@ struct SearchView: View {
          NavigationStack = destination
          */
         
-        NavigationStack {
+        NavigationView {
             List {
                 ForEach(filterMovie, id: \.self) { item in
                     // 셀 마다 버튼이 있다고 이해
@@ -71,16 +73,36 @@ struct SearchView: View {
                 }
             }
             .navigationTitle("검색")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button {
+                        showChart.toggle()
+                    } label: {
+                        Image(systemName: "star.fill")
+                    }
+                }
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button {
+                        print("클릭되었습니다!")
+                    } label: {
+                        Image(systemName: "person")
+                    }
+                }
+            }
             .navigationDestination(for: Movie.self) { item in
                 // 화면 전환 처리
                 SearchDetailView(movie: item)
             }
-            
+            .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "검색어를 입력 해주세요!")
+            .onSubmit(of: .search) {
+                print("검색검색")
+            }
+            .sheet(isPresented: $showChart, content: {
+                ChartView(movie: movies)
+            })
         }
-        .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "검색어를 입력 해주세요!")
-        .onSubmit(of: .search) {
-            print("검색검색")
-        }
+        
     }
 }
 
